@@ -1,0 +1,3 @@
+# String Session Converter
+
+WIP
