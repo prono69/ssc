@@ -1,6 +1,7 @@
 import base64
 import ipaddress
 import struct
+
 from datacenters import get_ipv4
 
 
@@ -27,7 +28,7 @@ def unpack(string: str):
     string = string[1:]
     ip_len = 4 if len(string) == 352 else 16
     dc_id, ip, port, key = struct.unpack(
-        '>B{}sH256s'.format(ip_len), base64.urlsafe_b64decode(string)
+        f'>B{ip_len}sH256s', base64.urlsafe_b64decode(string),
     )
 
     ip = ipaddress.ip_address(ip).compressed

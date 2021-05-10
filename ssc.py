@@ -1,15 +1,17 @@
 import os
 import time
-from structs import pyrogram, telethon
+
+from structs import pyrogram
+from structs import telethon
 clear = 'clear' if os.name != 'nt' else 'cls'
 
 os.system(clear)
 
-print("""
- ____ ____   ____ 
+print(r"""
+ ____ ____   ____
 / ___/ ___| / ___|
-\___ \___ \| |    
- ___) |__) | |___ 
+\___ \___ \| |
+ ___) |__) | |___
 |____/____/ \____|
 
 String Session Converter v1.1 by @rojserbest.
@@ -52,7 +54,7 @@ elif action == '1':
         unpacked_data['dc_id'],
         user_id,
         test_mode,
-        is_bot
+        is_bot,
     )
 elif action == '2':
     string = input('\nString session: ')
